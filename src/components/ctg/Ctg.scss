@@ -1,0 +1,83 @@
+#ctgform{
+    background-image: url('../../assets/images/cta-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px 0px;
+    min-height:40vh;
+    
+    .ctg{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin:0px 50px;
+
+        .title__wrapper{
+            width:100%;
+            h2{
+                font-size:var(--fs-3);
+                font-weight: var(--fw-700);
+            }
+            p{
+                font-size:var(--fs-9);
+                font-weight: var(--fw-500   );
+            }
+        }
+
+        .ctg__form{
+            position: relative;
+            width:100%;
+            input{
+                padding:18px 32px;
+                width:100%;
+                border-radius: 4px;
+                box-shadow: 0 3px 4px hsl(0deg 0% 0% / 20%);
+                font-size:var(--fs-9);
+                color:var(--eerie-black);
+            }
+
+            button{
+                position: absolute;
+                right:2px;
+                top:2px;
+                bottom:2px;
+                padding:15px 34px;
+                border-radius: 5px;
+                background-color: var(--eerie-black);
+                color:var(--citrine);
+                font-size:var(--fs-9);
+                font-weight: var(--fw-700);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media screen and (max-width:998px) {
+        .ctg{
+            flex-direction: column;
+            text-align: center;
+
+            .title__wrapper{
+                p{
+                    margin-bottom: 30px;
+                }
+            }
+            .ctg__form{
+                width:70%;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        .ctg{
+            .ctg__form{
+                width:100%;
+                button{
+                    position: static;
+                    margin-top:20px;
+                    font-size:var(--fs-11)
+                }
+            }
+        }
+    }
+}

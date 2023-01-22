@@ -1,0 +1,148 @@
+#service__section{
+    background:url("../../assets/images/service-bg.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+        .service{
+            display: flex;
+            justify-content: space-between;
+            gap:70px;
+            flex-wrap: wrap;
+
+
+            .service__banner{
+                max-width: max-content;
+                position: relative;
+
+                img{
+                    width:100%;
+                }
+
+                .download__button{
+                    padding:40px 50px;
+                    background-color: var(--citrine);
+                    position:absolute;
+                    bottom:5px;
+                    display: flex;
+                    align-items: center;
+                    gap:5px;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-size:var(--fs-10);
+                    font-weight: var(--fw-500);
+                    border-radius: 5px;
+                    right:-20px;
+                    color:var(--black);
+                                transform: rotate(90deg);
+                    transform-origin: bottom right;
+                }
+            }
+
+            .service__content{
+                width:calc(100% - 700px);
+
+                span{
+                    font-size:var(--fs-10);
+                    text-transform: uppercase;
+                    font-weight:var(--fw-500);
+                    color:var(--light-gray);
+                    position: relative;
+                    padding-left:50px;
+                    &::before{
+                        position: absolute;
+                        content:'';
+                        width:40px;
+                        height:3px;
+                        background-color: var(--citrine);
+                        top:7px;
+                        left:0;
+                    }
+                }
+
+                h1{
+                    font-size:var(--fs-1);
+                    line-height: 1.1;
+                    color:var(--white);
+                    margin:20px 0px;
+                }
+                p{
+                    font-size:var(--fs-9);
+                    color:var(--light-gray);
+                    line-height: 1.8;
+                }
+
+                .service__list{
+                    padding:0;
+                    margin:0;
+                    list-style: none ;
+                    margin:30px 0px;
+
+                    
+
+                    li{ 
+
+                        &:first-child{
+                            padding-bottom:30px;
+                            border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+                            margin-bottom:30px;
+                        }
+                        .service__card{
+                            display: flex;
+                            gap:20px;
+                            align-items: center;
+                            
+
+                            .servicecard__icon{
+                                min-width:80px;
+                                color:var(--white);
+                                height:80px;
+                                font-size:30px;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                outline:1px dashed var(--citrine);
+                                outline-offset: 5px;
+                                margin:5px;
+                            }
+                            .servicecard__content{
+                                h2{
+                                    font-size:var(--fs-5);
+                                    font-weight: var(--fw-700);
+                                    color:var(--white);
+                                    margin-bottom:7px;
+                                }
+                                p{
+                                    font-size:var(--fs-8)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+
+        @media screen and (max-width:998px) {
+            .service{
+                flex-direction: column;
+
+                .service__content{
+                    width:100%;
+                }
+            }
+        }
+
+        @media screen and (max-width:758px) {
+            .service{
+                .service__banner{
+                    .download__button{
+                        right:100px;
+                        bottom:7px;   
+                    }
+                }
+            }
+        }
+}

@@ -1,0 +1,133 @@
+#hero{
+    background:url("../../assets/images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+
+
+    .container{
+        max-width: 1320px;
+        margin:0 auto;
+
+
+        .hero__content{
+            margin-top:100px;
+            max-width: 600px;
+
+            p{
+                color:var(--citrine);
+                font-size:var(--fs-4);
+                font-weight: var(--fw-700);
+                 margin-bottom: 10px;
+            }
+
+            h1{
+                font-size:60px;
+                font-weight: var(--fw-700);
+                color:white;
+                line-height: 1.2;
+                margin-bottom: 20px;
+
+                strong{
+                    color:var(--citrine);
+                }
+            }
+
+            .meta__wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: start;
+                width:100%;
+                gap:30px;
+                margin-bottom:50px;
+
+
+                .badge__wrapper{
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+
+                    .badge{
+                        padding:3px 13px;
+                        background-color: white;
+                        color:var(--black);
+                        font-size: var(--fs-12);
+                        font-weight: var(--fw-700);
+                    }
+
+                    .badge__outline{
+                        border:2px solid white;
+                        background-color: transparent;
+                        color:var(--white)
+                    }
+                }
+
+                .ganre__wrapper{
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+
+                    a{
+                        color:var(--white)
+                    }
+                }
+
+                .date__time{
+                    display: flex;
+                    align-items: center;
+                    gap:20px;
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                        gap:6px;
+
+                        .icon{
+                            color:var(--citrine);
+                            font-size:var(--fs-10)
+                        }
+
+                        span{
+                            color:var(--white);
+                            font-size:var(--fs-10);
+                            font-weight: var(--fw-500);
+                        }
+                    }
+                }
+            }
+
+            .hero__button{
+                display: flex;
+                align-items: center;
+                gap:10px;
+                text-transform: uppercase;
+
+                .play__icon{
+                    font-size:var(--fs-8)
+                }
+
+                span{
+                    letter-spacing: 1.9px;
+                    font-size:var(--fs-11)
+                }
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .hero__content{
+                max-width: 100%;
+                h1{
+                    font-size:42px;
+                }
+            }
+        }
+
+        
+    }
+
+    @media screen and (max-width:768px) {
+        height:0px;
+    }
+
+}
